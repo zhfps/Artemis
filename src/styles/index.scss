@@ -1,0 +1,67 @@
+@import url(./public.scss);
+:root {
+    --el-menu-bg-color: rgb(240, 243, 246);
+}
+.no-select {
+    user-select: none;
+}
+
+.layout {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    .side-bar {       
+        width: 200px;
+        min-width: 200px;
+        background-color: rgb(240, 243, 246);
+        height: 100vh;
+        .logo-container{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .logo-item {
+                display: flex;
+                align-items: center;
+                margin-left: 15px;
+                .logo-icon {
+                    height: 25px;
+                    border-radius: 25px;
+                }
+                .title{  
+                    margin-left: 10px;          
+                    font-size: 14px;
+                    color: #000;
+                    font-weight: 400;
+                }
+            }
+        }
+        
+
+    }
+
+    .main-page {
+        flex: 1;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        .main-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .move-left{
+                flex: 1;
+            }
+        }
+        
+
+        .content {
+            padding: 10px;
+            height: calc(100vh - 60px);
+            width: calc(100vw - 220px);
+        }
+    }
+}

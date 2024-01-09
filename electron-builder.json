@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "01HDDZC0WFQCD95CJA305H6XZE",
+  "asar": false,
+  "productName": "tools",
+  "directories": {
+    "output": "release/${version}"
+  },
+  "files": [
+    "dist",
+    "dist-electron"
+  ],
+  "mac": {
+    "target": [
+      "dmg"
+    ],
+    "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
+  },
+  "win": {
+    "icon": "./public/favicon.ico",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": false
+  },
+  "publish":[
+      {
+        "provider": "github", 
+        "owner": "zhfps",
+        "repo": "git@github.com:zhfps/gtools.git",
+        "private": true, 
+        "token": "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",
+        "releaseType": "release"
+      }
+  ],
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "artifactName": "${productName}-Linux-${version}.${ext}"
+  }
+}

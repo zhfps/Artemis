@@ -1,0 +1,149 @@
+/* 滚动条 */
+::-webkit-scrollbar-thumb:horizontal { /*水平滚动条的样式*/
+    width: 4px;
+    background-color: #CCCCCC;
+    -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #fff; /*滚动条的背景颜色*/
+    -webkit-border-radius: 0; /*滚动条的圆角宽度*/
+}
+::-webkit-scrollbar {
+    width: 10px; /*滚动条的宽度*/
+    height: 8px; /*滚动条的高度*/
+}
+::-webkit-scrollbar-thumb:vertical { /*垂直滚动条的样式*/
+    height: 50px;
+    background-color: #999;
+    -webkit-border-radius: 4px;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+    border: 2px solid #fff;
+}
+::-webkit-scrollbar-thumb:hover { /*滚动条的hover样式*/
+    height: 50px;
+    background-color: #9f9f9f;
+    -webkit-border-radius: 4px;
+}
+
+//components
+/** 自定义 Element Plus 样式 */
+
+
+.el-table .warning-row {
+    --el-table-tr-bg-color: #d6adad;
+  }
+  
+  // 分页
+  .el-pagination {
+    // 参考 Bootstrap 的响应式设计 WIDTH = 768
+    @media screen and (max-width: 768px) {
+      .el-pagination__total,
+      .el-pagination__sizes,
+      .el-pagination__jump,
+      .btn-prev,
+      .btn-next {
+        display: none !important;
+      }
+    }
+  }
+  //步骤条
+  .el-steps--simple {
+    padding: 5px 10px !important;
+  }
+  .el-step__main {
+    //
+    .el-step__title {
+      font-size: 14px !important;
+    }
+    .is-process {
+      font-weight: normal !important;
+      font-size: 14px !important;
+      color: var(--el-color-primary) !important;
+    }
+  }
+  .el-dialog {
+    --el-dialog-title-font-size: 16px !important;
+  }
+  //
+  .el-dialog__body {
+    padding-top: 0 !important;
+  }
+  //
+  .el-tabs__header {
+    margin: 0 !important;
+  }
+  .cell {
+    display: flex;
+    justify-items: center;
+  }
+  
+  // 去掉表格单元格边框
+  .customer-table{
+    border:none !important;
+  }
+  .customer-table::before{
+    width: 0 !important;
+  }
+  .customer-table th{
+    border:none !important;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(50, 49, 48);
+  }
+  .customer-table th:hover{
+    border:none !important;
+    background-color: #eee !important;
+  }
+  .customer-table td:hover{
+    border:none !important;
+    background-color: #eee !important;
+  }
+  .customer-table tr{
+    border:none !important;
+  }
+  .customer-table td {
+    border-left:none !important;
+    border-right:none !important;
+    border-bottom:none !important;
+    border-top: var(--el-table-border);
+  }
+  .customer-table tr:last-child{
+    td {
+      border-bottom: var(--el-table-border) !important;
+    }
+  
+  }
+  .customer-table thead{
+    th {
+      border-bottom: var(--el-table-border) !important;
+    }
+  
+  }
+  
+  
+  // 表格最外边框
+  .el-table--border, .el-table--group{
+    border: none !important;
+  }
+  .el-table--border .el-table__inner-wrapper::after {
+    height: 0px !important;
+  }
+  .el-table__inner-wrapper::before {
+    height: 0px !important;
+  }
+  .el-table--border::after {
+    width: 0px !important;
+  }
+  .el-table__border-left-patch{
+    width: 0px !important;
+  }
+
+  .el-table .warning-row {
+    --el-table-tr-bg-color: var(--el-color-error);
+  }
+
+  .el-table .warning-waring-9 {
+    --el-table-tr-bg-color: var(--el-color-warning-light-9);
+  }

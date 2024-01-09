@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    /** 非相对模块导入的路径映射配置，根据 baseUrl 配置进行路径计算 */
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["electron/*"]
+    }
+  },
+  "include": [
+    "electron/**/*.ts",
+    "electron/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "vite.config.ts"
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ]
+}
