@@ -27,7 +27,7 @@
     
 		<el-scrollbar wrap-class="scrollbar-wrapper">
 			<el-menu
-				class="my-menu"
+				class="self-menu"
 				:default-active="activeMenu"
 				:unique-opened="true"
 				:router="true"
@@ -85,7 +85,7 @@ const activeMenu = computed(() => {
     }
   }
 }
-.my-menu {
+.self-menu {
   margin-top: 10px;
   width: 100%;
   background-color: rgb(240, 243, 246);

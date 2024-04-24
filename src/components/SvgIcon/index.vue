@@ -9,10 +9,10 @@ defineProps({
 </script>
 
 <template>
-   <IconConfigProvider>
-     <Icon>
-       <component :is="`icon-${name}`" />
-     </Icon>
-   </IconConfigProvider>
+	<IconConfigProvider>
+		<Icon>
+			<component :is="`icon-${name}`" />
+		</Icon>
+	</IconConfigProvider>
 </template>
 

@@ -18,6 +18,7 @@
   },
   "scripts": {
     "dev": "vite --mode development",
+    "check": "vue-tsc --noEmit",
     "build:web": "vue-tsc --noEmit && vite build",
     "build:win": "vue-tsc --noEmit && vite build && electron-builder install-app-deps && electron-builder --win --config ./electron-builder.json",
     "preview": "vite preview",

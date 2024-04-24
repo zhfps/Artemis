@@ -1,8 +1,14 @@
 <template>
-  <!-- move-bar -->
-    <div class="move-can" @mouseenter="mouseenter" @mouseleave="mouseleave" @mousedown="mousedown" @mouseup="mouseup" >
-      <slot/>
-    </div>
+	<!-- move-bar -->
+	<div
+		class="move-can"
+		@mouseenter="mouseenter"
+		@mouseleave="mouseleave"
+		@mousedown="mousedown"
+		@mouseup="mouseup"
+	>
+		<slot />
+	</div>
 </template>
 <script setup lang="ts">
 import { ipcRenderer } from 'electron'
@@ -12,11 +18,10 @@ defineOptions({
     name: 'MoveBar'
 })
 
-
 const enterFlag = ref(false)
 const mousedownFlag = ref(false)
 let timer: NodeJS.Timeout | null
-/**鼠标按压 */
+/** 鼠标按压 */
 const mousedown = () => {
     if (enterFlag.value) {
         ipcRenderer.invoke('window-move-open', true)
@@ -24,7 +29,7 @@ const mousedown = () => {
     }
 }
 
-/**鼠标释放 */
+/** 鼠标释放 */
 const mouseup = () => {
     if (enterFlag.value && mousedownFlag) {
         ipcRenderer.invoke('window-move-open', false)
@@ -32,12 +37,12 @@ const mouseup = () => {
     }
 }
 
-/**鼠标移入 */
+/** 鼠标移入 */
 const mouseenter = () => {
     enterFlag.value = true
 }
 
-/**鼠标移出 */
+/** 鼠标移出 */
 const mouseleave = () => {
     enterFlag.value = false
     // 避免卡顿的情况下，鼠标滑出移动范围，但窗口仍跟随鼠标移动
